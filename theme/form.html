@@ -1,0 +1,26 @@
+
+    <div id="add">
+    	<form action="index.php" method="post" enctype="multipart/form-data">
+        	<p><label>GPS (*pole wymagane):</label></p>
+            <div><input type="text" maxlength="50" value="" name="gps" id="gps" /></div>
+            <p><label>NAZWA POJAZDU / MODEL (*pole wymagane):</label></p>
+            <div><input type="text" maxlength="100" value="" name="vehicle" id="vehicle" /></div>
+            <p><label>ROCZNIK (jeżeli wprowadzony, to zakres od 1901 do <?php echo date ('Y'); ?>):</label></p>
+            <div><input type="text" maxlength="4" value="" name="year" id="year" /></div>
+            <p><label>CENA(jeżeli wprowadzona, to format: XXXX... lub XXX<span style="color: #F03; font-size: 20px">.</span>XX...):</label></p>
+            <div><input type="text" maxlength="7" value="" name="price" id="price" /></div>
+            <p><label>NR REJESTRACYJNY:</label></p>
+            <div><input type="text" maxlength="20" value="" name="board" id="board" /></div>
+            <p><label>OPIS:</label></p>
+            <div><textarea name="description" id="description" maxlength="700"></textarea></div>
+            <p><label>DODAJ ZDJĘCIE (formaty:. jpeg, .gif, .png):</label></p>
+            <div>
+            	<input type="hidden" name="MAX_FILE_SIZE" value="200000" /> 
+				<input name="image" type="file" /> 
+            </div>
+            <div id="submit-section">
+            	<input type="reset" id="reset" name="reset" value="RESET" />
+            	<input type="submit" id="submit" value="SEND" name="submit" />
+            </div>
+        </form>
+    </div>
