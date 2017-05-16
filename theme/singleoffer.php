@@ -17,6 +17,11 @@ $id_get = $_GET['id'];
 			$cena = $row['cena'];
 			$rocznik = $row['rocznik'];
 			$opis = $row['opis'];
+			$telefon = $row['telefon'];
+			$miejscowosc = $row['miejscowosc'];
+			$tak = $row['tak'];
+			$nie = $row['nie'];
+			$id = $row['id'];
 		}
 		
 		if ( file_exists ('images/'.$id_get.'.jpg')){
@@ -42,11 +47,19 @@ $id_get = $_GET['id'];
 				<div id="date-offer"><p><?php echo $data; ?></p></div>
                 <h2><?php echo $nazwa;?></h2>
             </header>
+            <input type="hidden" value="<?php echo $id;?>" id="id-control"/>
             <section>
 				<div id="image-container"><img src="<?php echo $path_image;?>" alt="<?php echo $nazwa;?>" /></div>
+                <!-- BLOK OCEN -->
+                <div id="reviews"><span id="reviews-up"><?php echo $tak;?></span><a href="#plus" id="plus">+</a><span id="reviews-down"><?php echo $nie;?></span><a href="#minus" id="minus">-</a></div>
+                
+                
                 <div id="description-single-offer">
                 	<div class="description-single-offer">
                     	<p>GPS: <b><?php echo $gps;?> </b></p>
+                    </div>
+                    <div class="description-single-offer">
+                    	<p>MIEJSCOWŚĆ: <b><?php echo $miejscowosc;?> </b></p>
                     </div>
                     <div class="description-single-offer">
                     	<p>ROK PRODUKCJI: <b><?php echo $rocznik;?> </b></p>
@@ -56,6 +69,9 @@ $id_get = $_GET['id'];
                     </div>
                     <div class="description-single-offer">
                     	<p id="price-single-offer">CENA: <span><b><?php echo $cena;?> PLN</b></span></p>
+                    </div>
+                    <div class="description-single-offer">
+                    	<p>TELEFON: <span><b><?php echo $telefon;?></b></span></p>
                     </div>
                      <div class="description-single-offer">
                     	<p>OPIS:</p>

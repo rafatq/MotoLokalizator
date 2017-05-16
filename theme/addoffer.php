@@ -35,6 +35,14 @@
 				$board = $_POST['board'];
 			} else $board = '';
 			
+			if ($_POST['telephone']){
+				$telephone = $_POST['telephone'];
+			} else $telephone = '';
+			
+			if ($_POST['place']){
+				$place = $_POST['place'];
+			} else $place = '';
+			
 			if ($_POST['description']){
 				$description = $_POST['description'];
 			} else $description = '';
@@ -42,7 +50,7 @@
 			
 			/* OBSŁUGA PRZESYŁANEGO PLIKU */
 			if (is_uploaded_file($_FILES['image']['tmp_name'])) {
-				if ($_FILES['image']['size'] > 200000) {
+				if ($_FILES['image']['size'] > 3990000) {
 					$check = 0;
 					} else $check = 1;
 				if ( ($_FILES[ 'image' ][ 'type'] == 'image/jpeg' || $_FILES[ 'image' ][ 'type'] == 'image/gif' || $_FILES[ 'image' ][ 'type'] == 'image/png') && $check === 1){
@@ -63,7 +71,7 @@
 			
 			
 			if ($check === 1){
-				$insert = array (null, $gps, $vehicle, $year, $price, $board, $description);
+				$insert = array (null, $gps, $place, $vehicle, $year, $price, $board, $description, $telephone);
 				$db_array = array (HOST, DBNAME, USER, PASS, TABLE1);
 				$base = new DB_actions($db_array);
 				$base -> db_add($insert);
