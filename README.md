@@ -17,7 +17,8 @@ Krótkie, proste w dodawaniu wpisy, pewien rodzaj tweetów, widoczne przez 7 dni
 - Wypełnienie formularza (cena, model pojazdu, *opisu pojazdu, *numeru telefonu właściciela, *numer rejstracyjny, *rocznik)
 - Wyświetlanie wpisów („pokaż oferty”)
 - Ocena produktu sprzedaży przez użytkowników 
-*Opcjonalnie 
+  
+ *Opcjonalnie 
 ## Autorzy:
 - Mateusz Maciaszek (183118) Zaoczne, KrZUIs2011
 - Kopijka Rafał (182977) Zaoczne, KrZUIs2011
