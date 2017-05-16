@@ -172,8 +172,11 @@ div#offers table{
 	width: 100%;
 }
 div#offers tr {
-	border: 1px solid #999;
-	
+	border: 1px solid #999;	
+}
+
+div#offers tr:hover{
+	background: #FAFAFA;
 }
 
 div#offers thead{
@@ -207,7 +210,7 @@ div#single-offer h2{
 	margin: 0 0 20px 0;
 	font-size: 36px;
 	line-height: 40px;
-	
+	text-transform: uppercase;
 }
 
 div#date-offer{
@@ -255,6 +258,68 @@ p#desc-single-offer{
 	line-height: 28px;
 	letter-spacing: 2px;
 	margin-top: 10px;
+}
+
+div#reviews{
+	text-align: right;
+	font-weight: bold;
+	font-size: 11px;
+	line-height: 30px;
+	width: 500px;
+	margin: 0 auto;
+}
+
+div#reviews a{
+	display: inline-block;
+	font-size: 20px;
+	text-decoration: none;
+	margin: 0 0 0 10px;
+	line-height: 28px;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-o-border-radius: 50%;
+}
+
+div#reviews a#plus{
+	color: #3F0;
+	border: 1px solid #3F0;
+	transition: all 1s ease;
+	-moz-transition: all 0.6s ease;
+	-webkit-transition: all 0.6s ease;
+	-o-transition: all 0.6s ease;
+	margin-right: 25px; 
+}
+
+div#reviews a#plus:hover{
+	background-color: #3F0;
+	color: #fff;
+	
+}
+
+div#reviews a#minus{
+	color:#F30;
+	border: 1px solid #F30;
+	transition: all 0.6s ease;
+	-moz-transition: all 0.6s ease;
+	-webkit-transition: all 0.6s ease;
+	-o-transition: all 0.6s ease; 
+}
+
+div#reviews a#minus:hover{
+	background: #F30;
+	color: #fff;
+}
+
+span#reviews-up{
+	color: #3F0;
+}
+
+span#reviews-down{
+	color: #F30;
 }
 /* ======== END ================== */
 
