@@ -53,9 +53,18 @@ class DB_actions {
 	
 	public function db_add($array){
 		
-		$in = $this -> dbh -> prepare('INSERT INTO '.$this -> table.' (gps, nazwa, rocznik, cena, rejestracja, opis, data) VALUES (:gps, :nazwa, :rocznik, :cena, :rejestracja, :opis, :data: telefon)');  
-		$in -> execute(array(':gps' => $array[1], ':nazwa' => $array[2], ':rocznik' => $array[3], ':cena' => $array[4], ':rejestracja' => $array[5], ':opis' => $array[6], ':data' => date('Y-m-d'), ':telefon' => $array[7])); 
+		$in = $this -> dbh -> prepare('INSERT INTO '.$this -> table.' (gps, miejscowosc, nazwa, rocznik, cena, rejestracja, opis, data, telefon) VALUES (:gps, :miejscowosc, :nazwa, :rocznik, :cena, :rejestracja, :opis, :data, :telefon)');  
+		$in -> execute(array(':gps' => $array[1], ':miejscowosc' => $array[2], ':nazwa' => $array[3], ':rocznik' => $array[4], ':cena' => $array[5], ':rejestracja' => $array[6], ':opis' => $array[7], ':data' => date('Y-m-d'), ':telefon' => $array[8])); 
 	}
+	
+	public function db_update($id, $rating, $val){ /* 1 zmienna to nr ID DB, 2 zmienna to nazwa kolumny oceny -> "tak "nie", 3 - oceny wtrażone w liczbie */
+		
+		$in = $this -> dbh -> prepare('UPDATE  '.$this -> table.' SET '.$rating.' =:'.$rating.' WHERE id=:id');  
+		$in -> execute(array(':'.$rating.'' => $val, 'id' => $id)); 
+	}
+	
+	
+	
 	
 	public function __destruct(){
 		$this -> dbh = null;
