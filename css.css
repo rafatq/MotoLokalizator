@@ -50,9 +50,6 @@ h2, h4{
 
 h1.title-h1{
 	text-transform: uppercase;
-	font-size: 40px;
-	padding: 20px 0;
-	margin: 40px 0 5px 0;
 }
 
 h1.title-h1 a{
@@ -72,7 +69,6 @@ h2.tagline{
 }
 
 div#content{
-	width: 1000px;
 	padding: 12px;
 	margin: 0 auto;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -80,7 +76,7 @@ div#content{
 
 div#navigation{
 	text-align: center;
-	padding: 10px;
+	padding: 10px 0;
 	border-top: #333 solid 1px;
 	border-bottom: #333 solid 1px;
 	margin: 0 0 80px 0;
@@ -162,10 +158,10 @@ div.statement > p:first-child{
 /* ===================================
 			OFFERS
 ==================================== */
-
 div#offers{
-	
+	margin: 0 auto;	
 }
+
 
 div#offers table{
 	border: 1px solid #999;
@@ -207,9 +203,6 @@ div#single-offer{
 
 div#single-offer h2{
 	font-weight: bold;
-	margin: 0 0 20px 0;
-	font-size: 36px;
-	line-height: 40px;
 	text-transform: uppercase;
 }
 
@@ -219,19 +212,19 @@ div#date-offer{
 }
 
 div#image-container{
-	width: 500px;
 	margin: 0 auto 20px auto;
 	padding: 10px;
 	border: 1px solid #999;
 }
 
 div#image-container img{
-	width: 500px;
+	max-width: 100%;
+ 	height:auto;
+ 	width:auto;
 }
 
 div#description-single-offer{
 	text-align: center;
-	width: 520px;
 	margin: 0 auto;
 	
 }
@@ -265,7 +258,6 @@ div#reviews{
 	font-weight: bold;
 	font-size: 11px;
 	line-height: 30px;
-	width: 500px;
 	margin: 0 auto;
 }
 
@@ -353,4 +345,187 @@ div#footer p{
 /* ======== END ================== */
 
 
+
+
+/* ============================== 
+=========== @MEDIA ============== */
+
+@media  (min-width: 1100px) {
+
+div#content{
+ 	width: 1100px;
+}
+h1.title-h1{
+	font-size: 40px;
+	padding: 20px 0;
+	margin: 40px 0 5px 0;
+}
+
+/* =============== SINGLE OFFER ================ */
+div#single-offer h2{
+	font-weight: bold;
+	margin: 0 0 20px 0;
+	font-size: 36px;
+	line-height: 40px;
+	text-transform: uppercase;
+}
+
+div#image-container, div#reviews {
+	width: 500px;
+}
+
+div#description-single-offer{
+	width: 520px;	
+}
+
+/* =============== OFFERS ==================== */
+div#offers{
+	width: 1076px;
+		
+}
+/* ================= END ==================== */
+}
+
+@media  (max-width: 1100px) and (min-width: 1000px) {
+div#content, div#offers{
+	max-width: 1076px;
+	min-width: 976px;
+}
+
+h1.title-h1{
+	font-size: 40px;
+	padding: 20px 0;
+	margin: 40px 0 5px 0;
+}
+
+/* =============== SINGLE OFFER ================ */
+div#single-offer h2{
+	font-weight: bold;
+	margin: 0 0 20px 0;
+	font-size: 36px;
+	line-height: 40px;
+	text-transform: uppercase;
+}
+
+div#description-single-offer, , div#reviews{
+	width: 500px;	
+}
+
+div#image-container{
+	width: 500px;
+}
+
+/* =============== OFFERS ==================== */
+
+/* ================= END ==================== */
+}
+
+
+@media (max-width: 1000px) and (min-width: 800px) {
+
+div#content, div#offers{
+	max-width: 976px;
+	min-width: 776px;
+}
+h1.title-h1{
+	font-size: 30px;
+	padding: 15px 0;
+	margin: 35px 0 5px 0;
+}	
+
+/* =============== SINGLE OFFER ================ */
+div#single-offer h2{
+	font-weight: bold;
+	margin: 0 0 18px 0;
+	font-size: 30px;
+	line-height: 36px;
+	text-transform: uppercase;
+}
+
+div#description-single-offer , div#reviews{
+	width: 500px;	
+}
+
+div#image-container{
+width: 500px;
+}
+/* ================= END ==================== */
+}
+
+
+@media (max-width: 800px) and (min-width: 500px) {
+
+div#content, div#offers{
+	max-width: 776px;
+	min-width: 476px;
+}
+h1.title-h1{
+	font-size: 28px;
+	padding: 12px 0;
+	margin: 30px 0 5px 0;
+}
+
+/* =============== SINGLE OFFER ================ */
+div#single-offer h2{
+	font-weight: bold;
+	margin: 0 0 16px 0;
+	font-size: 20px;
+	line-height: 28px;
+	text-transform: uppercase;
+}
+
+div#description-single-offer , div#reviews{
+	width: 440px;	
+}
+
+div#image-container{
+width: 440px;
+}
+/* ================= END ==================== */
+}
+
+@media  (max-width: 500px) {
+
+div#content, div#offers{
+	width: 324px;
+}
+
+h1.title-h1{
+	font-size: 8px;
+	padding: 4px 0;
+	margin: 25px 0 5px 0;
+}
+
+/* =============== SINGLE OFFER ================ */
+div#single-offer h2{
+	font-weight: bold;
+	margin: 0;
+	font-size: 8px;
+	line-height: 10px;
+	text-transform: uppercase;
+}
+
+div#description-single-offer , div#reviews{
+	width: 300px;	
+}
+
+div#image-container{
+	width: 300px;
+}
+
+/* ============== FOOTER ===================== */
+
+div#footer h3{
+	font-size: 16px;
+	
+}
+
+div#footer h4{
+	font-size: 8px;
+	
+}
+/* ================= END ==================== */
+	
+
+}
 
