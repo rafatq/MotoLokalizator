@@ -50,7 +50,7 @@
 			
 			/* OBSŁUGA PRZESYŁANEGO PLIKU */
 			if (is_uploaded_file($_FILES['image']['tmp_name'])) {
-				if ($_FILES['image']['size'] > 3990000) {
+				if ($_FILES['image']['size'] > 4*1024*1024) {
 					$check = 0;
 					} else $check = 1;
 				if ( ($_FILES[ 'image' ][ 'type'] == 'image/jpeg' || $_FILES[ 'image' ][ 'type'] == 'image/gif' || $_FILES[ 'image' ][ 'type'] == 'image/png') && $check === 1){
@@ -81,7 +81,7 @@
 				foreach ($offers as $row){
 					$result = trim($row['id']);
 				}
-				echo '<div class="statement"><p>'.$contents[0].'</p><p><a href="http://polmak.ayz.pl/?show=singleoffer&id='.$result.'">STRONA POJAZDU</a></p></div>';
+				echo '<div class="statement"><p>'.$contents[0].'</p><p><a data-role="button" href="http://polmak.ayz.pl/?show=singleoffer&id='.$result.'">STRONA POJAZDU</a></p></div>';
 			}
 			else if($check === 0){
 				echo '<div class="statement"><p></p><p>POPRAW DANE FORMULARZA</p></div>';

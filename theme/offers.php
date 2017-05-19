@@ -15,7 +15,7 @@ $autoincr = 1;
 
 foreach ($offers as $row){
      
-	 echo '<tr><td>'.$autoincr.'</td><td>'.$row['gps'].'</td><td class="vehicle-name">'.$row['nazwa'].'</td><td>'.$row['rocznik'].'</td><td>'.$row['cena'].' PLN</td><td><a href="http://polmak.ayz.pl/?show=singleoffer&id='.$row['id'].'">ZOBACZ</a></td></tr>';
+	 echo '<tr><td>'.$autoincr.'</td><td>'.$row['gps'].'</td><td class="vehicle-name">'.$row['nazwa'].'</td><td>'.$row['rocznik'].'</td><td>'.$row['cena'].' PLN</td><td><a data-role="button" href="http://polmak.ayz.pl/?show=singleoffer&id='.$row['id'].'">ZOBACZ</a></td></tr>';
      			
 $autoincr++;
 	}
