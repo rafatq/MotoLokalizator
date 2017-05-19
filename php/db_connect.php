@@ -37,7 +37,8 @@ class DB_actions {
 			return $this -> rec = $this -> dbh->query('SELECT * FROM '.$this -> table.' WHERE id='.$id.''); 
 		}
 		else{
-			return $this -> rec = $this -> dbh->query('SELECT * FROM '.$this -> table.' ORDER BY id DESC'); 	
+			$date = date('Ymd', strtotime('-7 days'));
+			return $this -> rec = $this -> dbh->query('SELECT * FROM '.$this -> table.' WHERE data >= '.$date.'  ORDER BY id DESC'); 	
 			}
 	}
 	
