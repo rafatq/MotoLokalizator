@@ -2,7 +2,7 @@
 
 
 
-$( document ).delegate("#main", "pagebeforecreate", function(){
+$(document).ready(function(){
 	
 
 	
