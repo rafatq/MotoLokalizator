@@ -2,15 +2,20 @@
 
 
 
-$( document ).delegate("#main", "pagebeforecreate", function(){
-	
-
+$(document).ready(function(){
+	$('#start-desc-button').click(function(){
+		$('#start-desc').toggle(200);
+		
+		return false;
+		});
 	
 	var idcontrol = document.getElementById('id-control').value
 	var cookieName = idcontrol + "-motolokalizator"; // Każda strona przedmiotu ustawia swoje cookie
 	
 	
-	
+/* ============================================================
+========================= OCENY ===============================
+============================================================= */
 	$('div#reviews a').click(function(){
 		
 		var valreviews = $(this).attr('id');
@@ -25,8 +30,6 @@ $( document ).delegate("#main", "pagebeforecreate", function(){
 				ajaxConn (1, 1, idcontrol, 2);
 				deleteCookie(cookieName);
 
-				
-				
 			}
 			else if (showCookie(cookieName) == 0 &&  valreviews == 'minus'){ //cofnij ocenę negatywną
 				ajaxConn (1, 1, idcontrol, 3);
@@ -55,10 +58,6 @@ $( document ).delegate("#main", "pagebeforecreate", function(){
 			ajaxConn (valueattr[0], valueattr[1], idcontrol, 1);
 			setCookie(cookieName, valueattr[0], 7)
 		}
-		
-		
-		
-		
 			
 	} /* end ID */
 		
@@ -66,8 +65,14 @@ $( document ).delegate("#main", "pagebeforecreate", function(){
 			return false;
 		
 			});
+
 	
 });
+
+
+
+
+
 
 function setCookie(name, val, days) {
     if (days) {
@@ -150,26 +155,8 @@ function ajaxConn (a, b, c, d) {
 		});
 	}
 	
-function geoLocation (){
-	if (navigator.geolocation){
-		var options = {
-			enableHeighAccuaracy: true
-		};
-		return navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
-		}
-		else {
-			return 777;
-		}
-}
-
-function onSuccess(position){
-	var content = document.getElementById('content');
-	var message = '';
-	var lat = position.coords.latitude;
-	var lang = position.coords.longitude;
-	rcontent.innerHTML = lat;
-}
-
-function onError (){
 	
-}
+
+	
+	
+	
