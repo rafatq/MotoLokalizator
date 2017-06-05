@@ -41,7 +41,7 @@ a:hover{
 h1, h2, h3, h4 {
 	text-align: center;
 	font-size: 20px;
-	font-family: Georgia, "Times New Roman", Times, serif;
+	font-family: 'Baloo', cursive;
 }
 
 h2, h4{
@@ -59,6 +59,8 @@ h1.title-h1 a{
 h1.title-h1 a:hover{
 	text-decoration: none;
 }
+
+
 
 h2.tagline{
 	font-size: 10px;
@@ -80,7 +82,7 @@ div#navigation{
 	border-top: #333 solid 1px;
 	border-bottom: #333 solid 1px;
 	margin: 0 0 80px 0;
-	font-family: Georgia, "Times New Roman", Times, serif;
+	font-family: 'Anton', sans-serif;
 }
 
 ul.menu > li{
@@ -90,7 +92,52 @@ ul.menu > li{
 ul.menu a{
 	padding: 10px;
 	color: inherit;
+	font-size: 20px;
 }
+
+/* ===================================
+			     START
+==================================== */
+
+div#start{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #FFF;
+}
+
+div#logo{
+	width: 100%;
+	height: 50%;
+	background: url(img/motolokalizator-logo.png) center no-repeat;
+	 
+}
+
+.start{
+	width: 500px;
+	margin: 10px auto;
+	text-align: center;
+}
+
+
+
+.start-description{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	line-height: 14px;
+	font-size: 10px;
+	color: #000;
+}
+
+#start-desc{
+	display: none;
+	color: #000;
+}
+
+#start-desc p{
+	padding: 10px 0 30px 0;
+}
+
+/* ============== end =============== */
 
 
 
@@ -126,7 +173,7 @@ div#add textarea{
 }
 
 div#submit-section{
-	width: 50%;
+	width: 180px;
 	margin: 20px auto 0 auto;
 }
 
@@ -134,6 +181,7 @@ div#submit-section{
 div#submit-section input{
 	margin: 0 0 20px 0;
 	font-size: 12px;
+	width: 180px;
 }
 
 div#add label{
@@ -149,6 +197,12 @@ div.statement{
 div.statement > p:first-child{
 	text-transform: uppercase;
 	
+}
+
+p#add-photo-title{
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
 }
 
 /* ======== END ================== */
@@ -361,6 +415,12 @@ h1.title-h1{
 	margin: 40px 0 5px 0;
 }
 
+a.start-start{
+	font-family: 'Anton', sans-serif;
+	font-size: 20px;
+	line-height: 30px;
+}
+
 /* =============== SINGLE OFFER ================ */
 div#single-offer h2{
 	font-weight: bold;
@@ -378,12 +438,50 @@ div#description-single-offer{
 	width: 520px;	
 }
 
+div#description-single-offer p{
+	text-transform: uppercase;
+}
+
 /* =============== OFFERS ==================== */
 div#offers{
 	width: 1076px;
 		
 }
 /* ================= END ==================== */
+}
+
+div#error{
+	background:#F99;
+	color: #fff;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	display: none;
+	padding: 20px 0;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+div#addphoto{
+	display: none;	
+}
+
+div#load{
+	display: none;
+	height: 12px;
+	width: 100px;
+	margin: 20px auto;
+	background:#90F;
+	color: #FFF;
+	font-size: 8px;
+	line-height: 12px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	text-align: center;
+
 }
 
 @media  (max-width: 1100px) and (min-width: 1000px) {
@@ -414,6 +512,8 @@ div#description-single-offer, , div#reviews{
 div#image-container{
 	width: 500px;
 }
+
+
 
 /* =============== OFFERS ==================== */
 
@@ -453,55 +553,64 @@ width: 500px;
 }
 
 
-@media (max-width: 800px) and (min-width: 500px) {
+@media (max-width: 600px) and (min-width: 401px) {
+	ul.menu > li{
+	display: list-item;
+}
+}
+
+@media (max-width: 400px) and (min-width: 300px) {
 
 div#content, div#offers{
-	max-width: 776px;
-	min-width: 476px;
+	max-width: 376px;
+	min-width: 276px;
 }
 h1.title-h1{
-	font-size: 28px;
-	padding: 12px 0;
-	margin: 30px 0 5px 0;
+	font-size: 10px;
+	padding: 5px 0;
+	margin: 15px 0 5px 0;
+	width: 300px;
+}
+
+h1.title-h1 a{
+	font-size: 10px !important;
+}
+
+div#navigation{
+	text-align: center;
+	padding: 5px 0;
+	margin: 0 0 20px 0;
+}
+
+
+ul.menu a{
+	padding: 4px;
+	color: inherit;
+	font-size: 12px;
+}
+/* =============== START ================ */
+
+
+div#logo{
+	height: 300px;
+	background: url(http://polmak.ayz.pl/img/motolokalizator-logo.png) center no-repeat;
+	 
+}
+.start{
+	color: #FFF;
+}
+
+.start {
+	width: 300px;
+	margin: 0 auto 10px auto;
 }
 
 /* =============== SINGLE OFFER ================ */
 div#single-offer h2{
 	font-weight: bold;
-	margin: 0 0 16px 0;
-	font-size: 20px;
-	line-height: 28px;
-	text-transform: uppercase;
-}
-
-div#description-single-offer , div#reviews{
-	width: 440px;	
-}
-
-div#image-container{
-width: 440px;
-}
-/* ================= END ==================== */
-}
-
-@media  (max-width: 500px) {
-
-div#content, div#offers{
-	width: 324px;
-}
-
-h1.title-h1{
-	font-size: 8px;
-	padding: 4px 0;
-	margin: 25px 0 5px 0;
-}
-
-/* =============== SINGLE OFFER ================ */
-div#single-offer h2{
-	font-weight: bold;
-	margin: 0;
-	font-size: 8px;
-	line-height: 10px;
+	margin: 0 0 18px 0;
+	font-size: 10px;
+	line-height: 14px;
 	text-transform: uppercase;
 }
 
@@ -510,22 +619,24 @@ div#description-single-offer , div#reviews{
 }
 
 div#image-container{
-	width: 300px;
+width: 300px;
 }
 
-/* ============== FOOTER ===================== */
-
-div#footer h3{
-	font-size: 16px;
-	
+/* =============== ADD OFFER ============= */
+div#add input, textarea{
+	width: 180px;
+	padding: 10px 0;
+	font-size: 10px;
+	color: #666;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	letter-spacing: 2px;
 }
 
-div#footer h4{
-	font-size: 8px;
-	
+/* ================= END ==================== */
+#footer{
+	font-size: 8px !important;
+	margin-top: 20px;
+	padding: 20px 0;	
 }
 /* ================= END ==================== */
-	
-
 }
-
