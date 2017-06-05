@@ -1,5 +1,3 @@
-
-
 <?php
 	
 function checkUA(){
@@ -16,5 +14,47 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
 			return false;
 		}
 }
+
+
+/* =========================================================================
+========================= FUNKCJA ZMNIEJSZANIA PLIKÓW ======================
+========================================================================== */
+
+// @wykorzystano implementacje GD2
+// @maksymalny plik wyjściowy 2000 px
+// @funkcja obsługuje typy: 'image/jpeg', 'image/png', 'image/gif'
+// @przykład wywołania funkcji: ImageReducing(500, 'images/84.jpg');
+// @ May 2017
+
+
+	function ImageReducing($maxsize_width, $path_file){ 
+	
+		if ($maxsize_width <= 2000){
+			$image = getimagesize($path_file);
+			if ($image[0] >= $maxsize_width){
+				$imageMimeType = $image['mime'];
+				if ($imageMimeType == 'image/jpeg' || $imageMimeType == 'image/png' || $imageMimeType == 'image/gif'){
+					$proportion = $maxsize_width / $image[0]; 
+					$outputWidth = ceil ($image[0] * $proportion);
+					$outputHeight = ceil ($image[1] * $proportion);
+					$canvas = imagecreatetruecolor($outputWidth, $outputHeight);
+					
+					if ($imageMimeType == 'image/jpeg'){
+						$createExtens = imagecreatefromjpeg($path_file);
+					} else if ($imageMimeType == 'image/gif'){
+						$createExtens = imagecreatefromgif($plik);
+					} else if ($imageMimeType == 'image/png'){
+						$createExtens = imagecreatefrompng($plik);	
+					}
+					
+					imagecopyresampled($canvas, $createExtens, 0, 0, 0, 0, $outputWidth, $outputHeight, $image[0], $image[1]);
+					imagejpeg($canvas, $path_file, 70);
+				}
+			} else return false;
+		} else return false;
+	}
+
+
+// ========================= END ImageReducing() ================================= //
 
 ?>
