@@ -1,10 +1,19 @@
 
     <div id="add">
-    	<form action="index.php" method="post" enctype="multipart/form-data">
+    <div id="error"></div>
+    <div id="addphoto">
+    <form id="form-2" action="php/upload_image.php" method="post" enctype="multipart/form-data">
+    	<p id="add-photo-title"><label>DODAJ ZDJĘCIE (formaty:. jpeg, .gif, .png [max. 6MB]):</label></p>
+		<div><input id="uploadImage" type="file" accept="image/*" name="image" /><input type="hidden" value="" id="image-id" name="imageid" data-role="button"/></div>
+        <div><input type="submit" value="DODAJ ZDJĘCIE" data-role="button" data-icon="arrow-u" id="submitimage"/></div>
+      </form>
+      <div id="load"></div>
+      </div>
+    	<form action="index.php" method="post" enctype="multipart/form-data" id="form-1">
         <div data-role="fieldcontain">
         	<fieldset data-role="controlgroup">
         		<p><label>GPS (*pole wymagane):</label></p>
-            	<div><input type="text" maxlength="50" value="" name="gps" id="gps" /></div>
+            	<div><input type="text" maxlength="200" value="" name="gps" id="gps" /></div>
                 
             	<p><label>MIEJSCOWOŚĆ:</label></p>
             	<div><input type="text" maxlength="40" value="" name="place" id="place" /></div>
@@ -27,10 +36,6 @@
             	<p><label>OPIS:</label></p>
             	<div><textarea name="description" id="description" maxlength="700"></textarea></div>
                 
-            	<p><label>DODAJ ZDJĘCIE (formaty:. jpeg, .gif, .png [max. 4MB):</label></p>
-            	<div>
-            	<input type="hidden" name="MAX_FILE_SIZE" value="4200000" /> 
-				<input name="image" type="file" input-type="button" /> 
             </div>
             <div id="submit-section">
             	<input type="reset" id="reset" name="reset" value="RESET" data-role="button" data-icon="refresh"/>

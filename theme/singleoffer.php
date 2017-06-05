@@ -38,10 +38,11 @@ $id_get = $_GET['id'];
 			$path_image = 'images/image_not_exist.jpg';
 		}
 	}
-
-
-
-?>	<div id="single-offer">
+	
+	$gpsexpl = explode(' ', $gps);
+	$google_maps_link = 'https://www.google.pl/search?q='.$gpsexpl[0].' '.$gpsexpl[1];
+	?>	
+<div id="single-offer">
 		<section>
         	<header>
 				<div id="date-offer"><p><?php echo $data; ?></p></div>
@@ -51,15 +52,15 @@ $id_get = $_GET['id'];
             <section>
 				<div id="image-container"><img src="<?php echo $path_image;?>" alt="<?php echo $nazwa;?>" /></div>
                 <!-- BLOK OCEN -->
-                <div id="reviews"><span id="reviews-up"><?php echo $tak;?></span><a href="#plus" id="plus">+</a><span id="reviews-down"><?php echo $nie;?></span><a href="#minus" id="minus">-</a></div>
+                <div id="reviews"><span id="reviews-up"><?php echo $tak;?></span><a href="#plus" id="plus" alt="<?php echo $id;?>">+</a><span id="reviews-down"><?php echo $nie;?></span><a href="#minus" id="minus" alt="<?php echo $id;?>">-</a></div>
                 
                 
                 <div id="description-single-offer">
                 	<div class="description-single-offer">
-                    	<p>GPS: <b><?php echo $gps;?> </b></p>
+                    	<p>GPS: <a href="<?php echo $google_maps_link;?>" target="_blank" title="zobacz w google maps" data-role="button" data-icon="arrow-r"><b><?php echo $gps;?></b> </a></p>
                     </div>
                     <div class="description-single-offer">
-                    	<p>MIEJSCOWŚĆ: <b><?php echo $miejscowosc;?> </b></p>
+                    	<p>MIEJSCOWOŚĆ: <b><?php echo $miejscowosc;?> </b></p>
                     </div>
                     <div class="description-single-offer">
                     	<p>ROK PRODUKCJI: <b><?php echo $rocznik;?> </b></p>
